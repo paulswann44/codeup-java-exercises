@@ -3,11 +3,18 @@ public class Person {
     //field to assign name & encapsulated name
     private String name;
 
-    public Person(String name){
+    //Default Constructor
+    public Person(){
+
+    }
+    //Constructor
+
+    public Person(
+            String name){
         this.name=name;
     }
 
-    public String getName(){  //gets the value from encapsulated
+    public String getName(){
 //TODO: return the person's name
         return name;
     }
@@ -29,12 +36,15 @@ public class Person {
 //        Person person2 = new Person("John") ;
 //        System.out.println(person1.getName().equals(person2.getName()));
 //        System.out.println(person1 == person2);
+        //Output = True ===>  This is just comparing 2 different objects so it is false.
+        //Output = False ===>
 
 
         //2
 //        Person person1 = new Person("John");
 //        Person person2 = person1;
 //        System.out.println(person1 == person2);
+        //Output = True
 
         //3
         Person person1 = new Person("John");

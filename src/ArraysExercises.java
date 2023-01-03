@@ -36,17 +36,26 @@ public class ArraysExercises {
 
     //a-4
     //Create a static method named addPerson. It should accept an array of Person objects, as well as a single person object to add to the passed array. It should return an array whose length is 1 greater than the passed array, with the passed person object at the end of the array.
-    public static String[] addPerson(String[] person, String newName) {
-        //creating a new String object with an increase in length size
-        String[] newPersons = new String[person.length + 1];
-        //Copy it by a loop
-        for (int i = 0; i < person.length; i++) {
-            newPersons[i] = person[i];
-        }
 
-        newPersons[newPersons.length - 1]= newName;
-        return newPersons;
+//    public static String[] addPerson(String[] person, String newName) {
+//        //creating a new String object with an increase in length size
+//        String[] newPersons = new String[person.length + 1];
+//        //Copy it by a loop
+//        for (int i = 0; i < person.length; i++) {
+//            //copying to newPerson
+//            newPersons[i] = person[i];
+//        }
+//
+//        newPersons[newPersons.length - 1]= newName;
+//        return newPersons;
+//
+//
+//    }
 
-    }
+public static Person[] addPerson(Person[] newPerson, Person newName){
+        Person[] newArray = Arrays.copyOf(newPerson, newPerson.length +1);
+        newArray[newPerson.length] = newName;
+        return newArray;
+}
 }
 
