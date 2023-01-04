@@ -1,15 +1,13 @@
 package shapes;
 
 public class ShapesTest {
-    public static void main(String[] args){
-        Rectangle box1 = new Rectangle(5,4);
-        Rectangle.getPerimeter(18,20);
-        Rectangle.getArea(18,20);
-        Rectangle box2= new Square(5,5);
-        box2.getArea();
+    public static void main(String[] args) {
+        Rectangle box1 = new Rectangle(5, 4);
+        System.out.println(box1.getPerimeter()); //18
+        System.out.println(box1.getArea()); // 20
 
-
-
-
+        Rectangle box2 = new Square(5);
+        System.out.println(box2.getPerimeter());//20
+        System.out.println(box2.getArea());//25
     }
 }

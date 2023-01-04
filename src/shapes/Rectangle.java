@@ -1,37 +1,22 @@
+
 package shapes;
 
 public class Rectangle {
-    protected int length;
-    protected int width;
+    protected double length;
+    protected double width;
 
-    //default constructor
-    public Rectangle(){
-
-    }
-    //default constructor
-    public Rectangle(int length, int width){
+    public Rectangle (double length, double width){
         this.length = length;
         this.width = width;
-
     }
-    //GET AREA -Overloaded -Polymorphism Here
-    public double getArea(double length, double width){
+
+    public double getArea(){
+        System.out.println("get area from rectangle class");
         return length * width;
     }
 
- 
-    public static int getArea(int length, int width){
-        return length * width;
-    }
-    //GET PERIMETER -Overloaded-Polymorphism Here
-    public double getPerimeter(double length, double width){
-        return (2 * length) + (2 * width);
-    }
-    public static int getPerimeter(int length, int width){
-        return (2 * length) + (2 * width);
-    }
-
-
-    public void getArea() {
+    public double getPerimeter(){
+        System.out.println("get perimeter from rectangle class");
+        return (2*length) + (2*width);
     }
 }
