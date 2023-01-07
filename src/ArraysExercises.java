@@ -8,16 +8,11 @@ public class ArraysExercises {
         for (int number : numbers) {
             System.out.println(number);
         }
-//        RESULTS:
-//        1
-//        2
-//        3
-//        4
-//        5
+
 
 //a-2
 //use What happens when you run the following code? Why is Arrays.toString necessary?
-//        public static void main(String[] args) {
+//This allows us to see the array
         System.out.println(Arrays.toString(numbers)); // RESULTS: [1, 2, 3, 4, 5]
 
 //a-3
@@ -25,14 +20,12 @@ public class ArraysExercises {
         String[] persons = {"Paul", "David", "Sam"};
         String[] newPerson = new String[persons.length + 1];
         for (String person : persons) {
-            System.out.println(person);
-//            RESULTS:
-//            Paul
-//            David
-//            Sam
+//            System.out.println(person);
+            System.out.println(person.getName());
         }
 
     }
+
 
     //a-4
     //Create a static method named addPerson. It should accept an array of Person objects, as well as a single person object to add to the passed array. It should return an array whose length is 1 greater than the passed array, with the passed person object at the end of the array.
