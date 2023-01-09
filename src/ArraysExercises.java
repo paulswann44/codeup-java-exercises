@@ -21,7 +21,7 @@ public class ArraysExercises {
         String[] newPerson = new String[persons.length + 1];
         for (String person : persons) {
 //            System.out.println(person);
-            System.out.println(person.getName());
+//            System.out.println(person.getName());
         }
 
     }
