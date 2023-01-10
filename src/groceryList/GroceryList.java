@@ -8,7 +8,7 @@ public class GroceryList {
 
         //Establishing the list of categories
         ArrayList<String> categories = new ArrayList<>();
-        categories.add("Produce");
+        categories.add("Produce");  //<----[add element to listArray]
         categories.add("Meat");
         categories.add("Dairy");
         categories.add("Bakery");
@@ -21,8 +21,8 @@ public class GroceryList {
         String createList = scanner.nextLine();
 
 
-        //if loop = true than while loop will start and get user inputs to build list
-        if (createList.equalsIgnoreCase("y")) {
+        //if loop = true then while loop will start and get user inputs to build list
+        if (createList.equalsIgnoreCase("y")|| createList.equalsIgnoreCase("yes")) {
             boolean addItem = true;
 
 
@@ -32,8 +32,8 @@ public class GroceryList {
 
 
 //                It loops through the categories arrayList of ["Produce", "Meat", "Dairy", "Bakery", "Other"]
-                for (int i = 0; i < categories.size(); i++) {
-                    System.out.println((i + 1) + ". " + categories.get(i));
+                for (int i = 0; i < categories.size(); i++) { //<------------[size() = length]
+                    System.out.println((i + 1) + ". " + categories.get(i)); //<-----[Returns the element in that index]
                     /* OUTPUT:
                     * 1. Produce
                     * 2. Meat
@@ -49,9 +49,11 @@ public class GroceryList {
                 //To get the correct index from the user, we need to subtract 1 from the user
                 String category = categories.get(categoryNumber - 1);
 
+
                 //Stores Item Name within a String
                 System.out.print("Enter the name of the item: ");
                 String item = scanner.nextLine();
+
 
                 //Stores Qty within an interger
                 System.out.print("Enter the quantity: ");
@@ -64,8 +66,8 @@ public class GroceryList {
                 groceryList.add(newItem);
 
                 System.out.print("Would you like to add another item? (y/n) ");
-                String addAnother = scanner.nextLine();
-                if (addAnother.equalsIgnoreCase("n")) {
+                String nextItem = scanner.nextLine();
+                if (nextItem.equalsIgnoreCase("n") || nextItem.equalsIgnoreCase("no") ) {
                     addItem = false;
                 }
             }
