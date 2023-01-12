@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class GroceryList {
     public static void main(String[] args) {
+
+        //STAGING OBJECTS START HERE
         Scanner scanner = new Scanner(System.in);
 
-        //Establishing the list of categories
+        //Establishing the list array of categories
         ArrayList<String> categories = new ArrayList<>();
         categories.add("Produce");  //<----[add element to listArray]
         categories.add("Meat");
@@ -14,9 +16,13 @@ public class GroceryList {
         categories.add("Bakery");
         categories.add("Other");
 
+        //this will be our grocery list
+        ArrayList<Items> groceryList = new ArrayList<>();
+        //STAGING OBJECTS END HERE
+
+
 
         //List for inputs to be stored in a list of groceryList
-        ArrayList<Items> groceryList = new ArrayList<>();
         System.out.print("Would you like to create a grocery list? (y/n) ");
         String createList = scanner.nextLine();
 
